@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/linkedin.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>May Dubai</title>
+    <link rel="stylesheet" href="/src/style.css"/>
+</head>
+<body>
+
+<main>
+    <header class="fixed top-0 left-0 w-full z-30 h-[var(--header-h)]
+               bg-gradient-to-b from-black/40 to-transparent backdrop-blur-[2px]">
+        <div class="page-container h-full flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <img src="/assets/icons/logo.svg" alt="LinkedIn" class="w-5 h-5"/>
+                <a class="text-white text-sm font-medium tracking-wide"
+                   href="https://www.linkedin.com/in/may-dubai/" target="_blank" rel="noopener">
+                    May Dubai
+                </a>
+            </div>
+
+            <nav class="hidden lg:flex items-center gap-8 text-white text-[0.9375rem]">
+                <a href="#about-us" class="hover:text-brand transition">About me</a>
+                <a href="#facts" class="hover:text-brand transition">Interesting facts</a>
+                <a href="#gallery" class="hover:text-brand transition">Photo Gallery</a>
+                <a href="#contacts" class="hover:text-brand transition">Contacts</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center gap-2 text-white text-[0.9375rem]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor"
+                     stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.272a1.125 1.125 0 00-.852-1.09l-4.423-1.106a1.125 1.125 0 00-1.173.417l-.97 1.293a.75.75 0 01-.822.27 12.035 12.035 0 01-7.143-7.143.75.75 0 01.27-.822l1.293-.97a1.125 1.125 0 00.417-1.173L6.612 3.102A1.125 1.125 0 005.523 2.25H4.25A2.25 2.25 0 002 4.5v2.25z"/>
+                </svg>
+                <a href="tel:+971505842977" class="text-white/90 hover:text-brand">
+                    <span>+971 505 84 29 77</span>
+                </a>
+            </div>
+
+            <button id="burgerBtn" aria-controls="mobileNav" aria-expanded="false" class="lg:hidden" type="button">
+                <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                     aria-hidden="true">
+                    <rect width="32" height="3.69231" rx="1.84615" fill="white"/>
+                    <rect x="6.15381" y="9.84613" width="25.8462" height="3.69231" rx="1.84615" fill="white"/>
+                    <rect y="19.6923" width="32" height="3.69231" rx="1.84615" fill="white"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+
+    <aside id="mobileNav"
+           class="fixed inset-0 z-50 lg:hidden transition-opacity duration-200 ease-out">
+
+        <img src="/assets/images/hero_bg.png" alt=""
+             class="absolute inset-0 w-full h-full object-cover bg-hero-gradient"/>
+
+        <div class="page-container relative h-full flex flex-col">
+            <div class="flex items-center justify-between px-[--gutter] pt-4">
+                <div class="flex items-center gap-2 text-white">
+                    <img src="/assets/icons/logo.svg" alt="LinkedIn" class="w-5 h-5"/>
+                    <a class="text-sm font-medium tracking-wide"
+                       href="https://www.linkedin.com/in/may-dubai/" target="_blank" rel="noopener">
+                        May Dubai
+                    </a>
+                </div>
+
+                <button id="navClose" class="p-2 -m-2 text-white" type="button" aria-label="Close menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.8049 0.445609C20.945 0.305559 21.1113 0.194464 21.2943 0.118669C21.4773 0.0428743 21.6734 0.00386374 21.8715 0.00386374C22.0696 0.00386374 22.2658 0.0428743 22.4488 0.118669C22.6318 0.194464 22.7981 0.305559 22.9382 0.445609C23.0783 0.58566 23.1894 0.751924 23.2652 0.934909C23.341 1.11789 23.38 1.31402 23.38 1.51208C23.38 1.71014 23.341 1.90626 23.2652 2.08925C23.1894 2.27223 23.0783 2.4385 22.9382 2.57855L13.8271 11.6908L22.9382 20.8031L23.1326 21.0395C23.3226 21.3298 23.4069 21.6767 23.3712 22.0218C23.3356 22.3669 23.1822 22.6893 22.9368 22.9346C22.6914 23.18 22.369 23.3334 22.0238 23.369C21.6786 23.4047 21.3317 23.3204 21.0413 23.1304L20.8049 22.936L11.6911 13.8237L2.57738 22.9386C2.43714 23.0787 2.27068 23.1897 2.0875 23.2655C1.90433 23.3412 1.70803 23.3801 1.50981 23.38C1.3116 23.3799 1.11535 23.3407 0.932264 23.2648C0.749183 23.1888 0.582858 23.0775 0.442784 22.9373C0.302711 22.7971 0.191633 22.6307 0.115891 22.4475C0.0401502 22.2644 0.00122963 22.0681 0.00135162 21.8699C0.0014736 21.6717 0.0406358 21.4755 0.116602 21.2925C0.192569 21.1094 0.303852 20.9431 0.444098 20.8031L9.55785 11.6908L0.441471 2.57855L0.249685 2.34214C0.058154 2.05186 -0.0273287 1.7044 0.00766984 1.35841C0.0426684 1.01242 0.196004 0.689109 0.441788 0.443057C0.687572 0.197004 1.01075 0.0432878 1.35675 0.0078606C1.70275 -0.0275666 2.05037 0.057466 2.34094 0.248602L2.57738 0.445609L11.6911 9.55525L20.8049 0.445609Z"
+                              fill="white"/>
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="flex-1 grid place-items-center px-[--gutter] text-white font-alt">
+                <ul class="grid gap-6 text-[clamp(1.4rem,6vw,2rem)] leading-tight text-center">
+                    <li><a href="#about-us" class="hover:text-brand transition">About me</a></li>
+                    <li><a href="#facts" class="hover:text-brand transition">Interesting facts</a></li>
+                    <li><a href="#gallery" class="hover:text-brand transition">Photo Gallery</a></li>
+                    <li><a href="#contacts" class="hover:text-brand transition">Contacts</a></li>
+                </ul>
+            </nav>
+
+            <div class="px-[--gutter] pb-8 flex justify-center">
+                <a href="https://wa.me/971505842977"
+                   class="inline-flex items-center gap-3 text-white text-[clamp(1.1rem,5vw,1.5rem)]">
+                    <img src="/assets/icons/whatsapp.svg" alt="" class="w-6 h-6"/>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <section id="hero"
+             class="no-section-top relative pt-[var(--header-h)] overflow-hidden text-white lg:pb-[38px]">
+        <img src="/assets/images/hero_bg.png" alt=""
+             class="absolute inset-0 w-full h-full object-cover bg-hero-gradient" />
+
+        <div class="relative z-10 page-container mx-[calc(var(--gutter)*-1)]">
+
+            <h1
+                    class="text-center font-regular leading-tight
+         text-[clamp(2.5rem,3vw+1rem,3rem)]
+         lg:text-[clamp(5rem,7vw,5rem)]
+         /* десктоп: центрируем абсолютно */
+         lg:absolute lg:inset-0 lg:flex lg:items-center lg:justify-center
+         lg:z-20 lg:pointer-events-none">
+                May Dubai
+            </h1>
+
+            <div class="relative z-10 grid gap-8 pb-8 lg:pb-32 lg:pt-32
+                lg:grid-cols-3 lg:grid-rows-[auto_1fr_auto] lg:items-center lg:gap-x-12 lg:gap-y-10
+                max-w-[1150px] mx-auto">
+
+                <div class="order-1 col-span-1 space-y-2 text-center lg:text-left
+                  lg:col-start-1 lg:row-start-1">
+                    <p class="font-semibold text-[0.8333rem] lg:text-[1.3333rem]">Leading Advisor</p>
+                    <p class="text-white/80 text-[0.6667rem] lg:text-[1.1111rem]">
+                        We guide clients in UAE real estate
+                    </p>
+                </div>
+
+                <div class="order-3 col-span-1 space-y-2 text-center lg:text-right
+                  lg:col-start-3 lg:row-start-1">
+                    <p class="font-semibold text-[0.8333rem] lg:text-[1.3333rem]">$250M+ Closed Deals</p>
+                    <p class="text-white/80 text-[0.6667rem] lg:text-[1.1111rem]">
+                        Proven results in property sales
+                    </p>
+                </div>
+
+                <div class="order-2 col-span-1 space-y-2 text-center lg:text-left
+                  lg:col-start-1 lg:row-start-3">
+                    <p class="font-semibold text-[0.8333rem] lg:text-[1.3333rem]">12+ Years Expertise</p>
+                    <p class="text-white/80 text-[0.6667rem] lg:text-[1.1111rem]">
+                        Strong track record in the market
+                    </p>
+                </div>
+
+                <div class="order-4 col-span-1 space-y-2 text-center lg:text-right
+                  lg:col-start-3 lg:row-start-3">
+                    <p class="font-semibold text-[0.8333rem] lg:text-[1.3333rem]">Specialization</p>
+                    <p class="text-white/80 text-[0.6667rem] lg:text-[1.1111rem]">
+                        Investments in residential &amp;<br class="hidden lg:block"/>
+                        commercial properties<br class="hidden lg:block"/>
+                        in the UAE
+                    </p>
+                </div>
+
+                <div class="order-0 mt-[1.3889rem] lg:hidden flex justify-center">
+                    <a href="https://wa.me/971505842977"
+                       class="inline-flex items-center gap-2 rounded-full
+                  bg-[#1E1E1ECC] px-4 py-2 text-[0.9375rem]">
+                        <img src="/assets/icons/whatsapp.svg" alt="" class="w-4 h-4" />
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Desktop WhatsApp -->
+            <a href="https://wa.me/971505842977"
+               class="hidden lg:flex items-center gap-3 absolute left-[--gutter] bottom-8 z-40
+              px-2 py-3 text-[1.125rem]">
+                <img src="/assets/icons/whatsapp.svg" alt="" class="w-6 h-6" />
+                WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <section id="about-us" class="page-container">
+        <div class="grid items-start lg:items-center gap-[1.5rem] md:gap-[2rem]
+                lg:grid-cols-12 lg:gap-[2.666rem]">
+            <div class="order-2 lg:order-1 lg:col-span-5">
+                <div class="with-glow mx-auto lg:ml-0 lg:w-[23.44rem]">
+                    <img
+                            src="/assets/images/about_person.png"
+                            alt="May Dubai"
+                            class="relative z-10 block w-full h-auto rounded-[1.5rem]"
+                            loading="lazy"
+                    />
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2 lg:col-span-6 lg:self-center lg:flex lg:flex-col lg:justify-center">
+                <h2 class="font-regular leading-tight text-[#4584BD] text-[clamp(1.5625rem,1.1rem_+_1.8vw,2.9375rem)]">
+                    About May Dubai
+                </h2>
+                <div class="mt-[1rem] lg:mt-[1.25rem] space-y-[1rem]
+                    text-[clamp(1rem,0.95rem_+_0.3vw,1.125rem)]
+                    leading-relaxed text-white">
+                    <p>
+                        Our team specializes in identifying high-potential residential and commercial projects, ensuring
+                        both sustainable growth and long-term value.
+                    </p>
+                    <p> From luxury waterfront apartments to prime business hubs, our portfolio features some of the
+                        city’s most prestigious developments, tailored to meet the diverse goals of global investors and
+                        corporate clients.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="page-container section-pad">
+            <div class="relative mb-6 md:mb-8 flex items-center justify-between">
+                <h2 class="text-white font-normal leading-tight text-[25px] lg:text-[35px]">
+                    Real estate properties
+                </h2>
+
+                <div class="flex gap-3">
+                    <button id="galPrev"
+                            class="grid place-items-center size-9 rounded-full bg-[#0F5686] text-white/90
+                       shadow-sm ring-1 ring-white/10 disabled:opacity-40 disabled:cursor-not-allowed"
+                            aria-label="Previous" type="button">
+                        <svg width="16" height="16" viewBox="0 0 16 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.49.707 1.085 10.987a2 2 0 0 0-.615 1.46c0 .279.054.548.16.798.105.251.26.478.455.67l10.406 10.28c.193.192.424.345.678.45.253.105.525.16.799.16.274 0 .546-.055.8-.16.253-.105.483-.258.676-.45.19-.191.345-.418.45-.669.105-.25.16-.52.16-.798 0-.272-.054-.54-.16-.79a1.98 1.98 0 0 0-.455-.671L5.497 12.447 14.446 3.626c.392-.387.612-.912.612-1.46 0-.271-.054-.54-.159-.79a1.98 1.98 0 0 0-.454-.668 1.98 1.98 0 0 0-1.382-.553c-.274 0-.546.053-.8.158-.253.104-.483.257-.676.45Z" fill="white"/></svg>
+                    </button>
+
+                    <button id="galNext"
+                            class="grid place-items-center size-9 rounded-full bg-[#0F5686] text-white/90
+                       shadow-sm ring-1 ring-white/10 disabled:opacity-40 disabled:cursor-not-allowed"
+                            aria-label="Next" type="button">
+                        <svg width="16" height="16" viewBox="0 0 16 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.509.707 14.915 10.987c.193.191.348.419.454.67.105.25.159.519.159.798 0 .272-.054.54-.16.79a1.98 1.98 0 0 1-.454.671L4.51 24.188a2.002 2.002 0 0 1-.678.45c-.254.105-.526.16-.8.16-.275 0-.547-.055-.8-.16a2.002 2.002 0 0 1-.676-.45 1.98 1.98 0 0 1-.45-.669 1.98 1.98 0 0 1-.16-.798c0-.272.054-.54.16-.79.105-.251.26-.478.455-.67l8.95-8.82L1.554 3.626A2.002 2.002 0 0 1 .942 2.166c0-.271.054-.54.159-.79.105-.25.26-.478.454-.668A1.98 1.98 0 0 1 3.03.102c.274 0 .546.053.8.158.253.104.483.257.676.45Z" fill="white"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="galTrack"
+                 class="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory
+                [-webkit-overflow-scrolling:touch] [scrollbar-width:none] touch-pan-x">
+
+                <article class="snap-center shrink-0 basis-full">
+                    <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+                    auto-rows-[minmax(380px,1fr)] md:auto-rows-[minmax(420px,1fr)] lg:auto-rows-[minmax(460px,1fr)]">
+
+                        <a class="group rounded-2xl overflow-hidden bg-white/5 ring-1 ring-white/10 block relative">
+                            <img src="/assets/images/property/property_1.png" alt="Habtoor City"
+                                 class="w-full h-full aspect-[5/4] lg:aspect-[6/5] object-cover">
+                            <div class="absolute inset-0 opacity-80
+                        bg-[linear-gradient(180deg,rgba(0,90,125,0)_0%,#005A7D_100%)]"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-4 text-white z-10">
+                                <div class="text-[18px] font-semibold mb-1">Habtoor City</div>
+                                <div class="flex items-center gap-2 text-white/80 text-[13px]">
+                                    <img src="/assets/icons/pin.svg" alt="" class="w-4 h-4 opacity-80">
+                                    <span>Адрес расположения объекта</span>
+                                </div>
+                                <div class="mt-3 flex items-center justify-between text-[13px]">
+                                    <span>от 2.600.000 AED</span>
+                                    <span class="underline underline-offset-2 opacity-90 group-hover:opacity-100">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="group rounded-2xl overflow-hidden bg-white/5 ring-1 ring-white/10 block relative">
+                            <img src="/assets/images/property/property_2.png" alt="ЖК Elitz 2"
+                                 class="w-full h-full aspect-[5/4] lg:aspect-[6/5] object-cover">
+                            <div class="absolute inset-0 opacity-80 bg-[linear-gradient(180deg,rgba(0,90,125,0)_0%,#005A7D_100%)]"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-4 text-white z-10">
+                                <div class="text-[18px] font-semibold mb-1">ЖК Elitz 2</div>
+                                <div class="flex items-center gap-2 text-white/80 text-[13px]">
+                                    <img src="/assets/icons/pin.svg" alt="" class="w-4 h-4 opacity-80">
+                                    <span>Адрес расположения объекта</span>
+                                </div>
+                                <div class="mt-3 flex items-center justify-between text-[13px]">
+                                    <span>от 2.600.000 AED</span>
+                                    <span class="underline underline-offset-2 opacity-90 group-hover:opacity-100">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="group rounded-2xl overflow-hidden bg-white/5 ring-1 ring-white/10 block relative">
+                            <img src="/assets/images/property/property_3.png" alt="Pitz 564"
+                                 class="w-full h-full aspect-[5/4] lg:aspect-[6/5] object-cover">
+                            <div class="absolute inset-0 opacity-80 bg-[linear-gradient(180deg,rgba(0,90,125,0)_0%,#005A7D_100%)]"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-4 text-white z-10">
+                                <div class="text-[18px] font-semibold mb-1">Pitz 564</div>
+                                <div class="flex items-center gap-2 text-white/80 text-[13px]">
+                                    <img src="/assets/icons/pin.svg" alt="" class="w-4 h-4 opacity-80">
+                                    <span>Адрес расположения объекта</span>
+                                </div>
+                                <div class="mt-3 flex items-center justify-between text-[13px]">
+                                    <span>от 2.600.000 AED</span>
+                                    <span class="underline underline-offset-2 opacity-90 group-hover:opacity-100">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="group rounded-2xl overflow-hidden bg-white/5 ring-1 ring-white/10 block relative">
+                            <img src="/assets/images/property/property_4.png" alt="Safa One"
+                                 class="w-full h-full aspect-[5/4] lg:aspect-[6/5] object-cover">
+                            <div class="absolute inset-0 opacity-80 bg-[linear-gradient(180deg,rgba(0,90,125,0)_0%,#005A7D_100%)]"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-4 text-white z-10">
+                                <div class="text-[18px] font-semibold mb-1">Safa One</div>
+                                <div class="flex items-center gap-2 text-white/80 text-[13px]">
+                                    <img src="/assets/icons/pin.svg" alt="" class="w-4 h-4 opacity-80">
+                                    <span>Адрес расположения объекта</span>
+                                </div>
+                                <div class="mt-3 flex items-center justify-between text-[13px]">
+                                    <span>от 2.600.000 AED</span>
+                                    <span class="underline underline-offset-2 opacity-90 group-hover:opacity-100">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="group rounded-2xl overflow-hidden bg-white/5 ring-1 ring-white/10 block relative">
+                            <img src="/assets/images/property/property_5.png" alt="BAYZ 101"
+                                 class="w-full h-full aspect-[5/4] lg:aspect-[6/5] object-cover">
+                            <div class="absolute inset-0 opacity-80 bg-[linear-gradient(180deg,rgba(0,90,125,0)_0%,#005A7D_100%)]"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-4 text-white z-10">
+                                <div class="text-[18px] font-semibold mb-1">BAYZ 101</div>
+                                <div class="flex items-center gap-2 text-white/80 text-[13px]">
+                                    <img src="/assets/icons/pin.svg" alt="" class="w-4 h-4 opacity-80">
+                                    <span>Адрес расположения объекта</span>
+                                </div>
+                                <div class="mt-3 flex items-center justify-between text-[13px]">
+                                    <span>от 2.600.000 AED</span>
+                                    <span class="underline underline-offset-2 opacity-90 group-hover:opacity-100">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="group rounded-2xl overflow-hidden bg-white/5 ring-1 ring-white/10 block relative">
+                            <img src="/assets/images/property/property_6.png" alt="Azizi Aura"
+                                 class="w-full h-full aspect-[5/4] lg:aspect-[6/5] object-cover">
+                            <div class="absolute inset-0 opacity-80 bg-[linear-gradient(180deg,rgba(0,90,125,0)_0%,#005A7D_100%)]"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-4 text-white z-10">
+                                <div class="text-[18px] font-semibold mb-1">Azizi Aura</div>
+                                <div class="flex items-center gap-2 text-white/80 text-[13px]">
+                                    <img src="/assets/icons/pin.svg" alt="" class="w-4 h-4 opacity-80">
+                                    <span>Адрес расположения объекта</span>
+                                </div>
+                                <div class="mt-3 flex items-center justify-between text-[13px]">
+                                    <span>от 2.600.000 AED</span>
+                                    <span class="underline underline-offset-2 opacity-90 group-hover:opacity-100">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </article>
+                <article class="snap-center shrink-0 basis-full">
+                    <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+                    auto-rows-[minmax(380px,1fr)] md:auto-rows-[minmax(420px,1fr)] lg:auto-rows-[minmax(460px,1fr)]">
+
+                        <a class="group rounded-2xl overflow-hidden bg-white/5 ring-1 ring-white/10 block relative">
+                            <img src="/assets/images/property/property_1.png" alt="Habtoor City"
+                                 class="w-full h-full aspect-[5/4] lg:aspect-[6/5] object-cover">
+                            <div class="absolute inset-0 opacity-80
+                        bg-[linear-gradient(180deg,rgba(0,90,125,0)_0%,#005A7D_100%)]"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-4 text-white z-10">
+                                <div class="text-[18px] font-semibold mb-1">Habtoor City</div>
+                                <div class="flex items-center gap-2 text-white/80 text-[13px]">
+                                    <img src="/assets/icons/pin.svg" alt="" class="w-4 h-4 opacity-80">
+                                    <span>Адрес расположения объекта</span>
+                                </div>
+                                <div class="mt-3 flex items-center justify-between text-[13px]">
+                                    <span>от 2.600.000 AED</span>
+                                    <span class="underline underline-offset-2 opacity-90 group-hover:opacity-100">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="group rounded-2xl overflow-hidden bg-white/5 ring-1 ring-white/10 block relative">
+                            <img src="/assets/images/property/property_2.png" alt="ЖК Elitz 2"
+                                 class="w-full h-full aspect-[5/4] lg:aspect-[6/5] object-cover">
+                            <div class="absolute inset-0 opacity-80 bg-[linear-gradient(180deg,rgba(0,90,125,0)_0%,#005A7D_100%)]"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-4 text-white z-10">
+                                <div class="text-[18px] font-semibold mb-1">ЖК Elitz 2</div>
+                                <div class="flex items-center gap-2 text-white/80 text-[13px]">
+                                    <img src="/assets/icons/pin.svg" alt="" class="w-4 h-4 opacity-80">
+                                    <span>Адрес расположения объекта</span>
+                                </div>
+                                <div class="mt-3 flex items-center justify-between text-[13px]">
+                                    <span>от 2.600.000 AED</span>
+                                    <span class="underline underline-offset-2 opacity-90 group-hover:opacity-100">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="group rounded-2xl overflow-hidden bg-white/5 ring-1 ring-white/10 block relative">
+                            <img src="/assets/images/property/property_3.png" alt="Pitz 564"
+                                 class="w-full h-full aspect-[5/4] lg:aspect-[6/5] object-cover">
+                            <div class="absolute inset-0 opacity-80 bg-[linear-gradient(180deg,rgba(0,90,125,0)_0%,#005A7D_100%)]"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-4 text-white z-10">
+                                <div class="text-[18px] font-semibold mb-1">Pitz 564</div>
+                                <div class="flex items-center gap-2 text-white/80 text-[13px]">
+                                    <img src="/assets/icons/pin.svg" alt="" class="w-4 h-4 opacity-80">
+                                    <span>Адрес расположения объекта</span>
+                                </div>
+                                <div class="mt-3 flex items-center justify-between text-[13px]">
+                                    <span>от 2.600.000 AED</span>
+                                    <span class="underline underline-offset-2 opacity-90 group-hover:opacity-100">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="group rounded-2xl overflow-hidden bg-white/5 ring-1 ring-white/10 block relative">
+                            <img src="/assets/images/property/property_4.png" alt="Safa One"
+                                 class="w-full h-full aspect-[5/4] lg:aspect-[6/5] object-cover">
+                            <div class="absolute inset-0 opacity-80 bg-[linear-gradient(180deg,rgba(0,90,125,0)_0%,#005A7D_100%)]"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-4 text-white z-10">
+                                <div class="text-[18px] font-semibold mb-1">Safa One</div>
+                                <div class="flex items-center gap-2 text-white/80 text-[13px]">
+                                    <img src="/assets/icons/pin.svg" alt="" class="w-4 h-4 opacity-80">
+                                    <span>Адрес расположения объекта</span>
+                                </div>
+                                <div class="mt-3 flex items-center justify-between text-[13px]">
+                                    <span>от 2.600.000 AED</span>
+                                    <span class="underline underline-offset-2 opacity-90 group-hover:opacity-100">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="group rounded-2xl overflow-hidden bg-white/5 ring-1 ring-white/10 block relative">
+                            <img src="/assets/images/property/property_5.png" alt="BAYZ 101"
+                                 class="w-full h-full aspect-[5/4] lg:aspect-[6/5] object-cover">
+                            <div class="absolute inset-0 opacity-80 bg-[linear-gradient(180deg,rgba(0,90,125,0)_0%,#005A7D_100%)]"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-4 text-white z-10">
+                                <div class="text-[18px] font-semibold mb-1">BAYZ 101</div>
+                                <div class="flex items-center gap-2 text-white/80 text-[13px]">
+                                    <img src="/assets/icons/pin.svg" alt="" class="w-4 h-4 opacity-80">
+                                    <span>Адрес расположения объекта</span>
+                                </div>
+                                <div class="mt-3 flex items-center justify-between text-[13px]">
+                                    <span>от 2.600.000 AED</span>
+                                    <span class="underline underline-offset-2 opacity-90 group-hover:opacity-100">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="group rounded-2xl overflow-hidden bg-white/5 ring-1 ring-white/10 block relative">
+                            <img src="/assets/images/property/property_6.png" alt="Azizi Aura"
+                                 class="w-full h-full aspect-[5/4] lg:aspect-[6/5] object-cover">
+                            <div class="absolute inset-0 opacity-80 bg-[linear-gradient(180deg,rgba(0,90,125,0)_0%,#005A7D_100%)]"></div>
+                            <div class="absolute inset-x-0 bottom-0 p-4 text-white z-10">
+                                <div class="text-[18px] font-semibold mb-1">Azizi Aura</div>
+                                <div class="flex items-center gap-2 text-white/80 text-[13px]">
+                                    <img src="/assets/icons/pin.svg" alt="" class="w-4 h-4 opacity-80">
+                                    <span>Адрес расположения объекта</span>
+                                </div>
+                                <div class="mt-3 flex items-center justify-between text-[13px]">
+                                    <span>от 2.600.000 AED</span>
+                                    <span class="underline underline-offset-2 opacity-90 group-hover:opacity-100">Подробнее</span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="facts" class="relative overflow-hidden section-pad">
+        <img src="/assets/images/facts_bg.png" alt="" class="absolute inset-0 w-full h-full object-cover"
+             loading="lazy"/>
+
+        <div class="relative z-10 page-container">
+            <div class="grid gap-y-[0.972rem] lg:gap-[0.972rem] lg:grid-cols-12 lg:grid-rows-2 lg:items-stretch lg:auto-rows-[1fr]">
+                <article class="rounded-[1.75rem] bg-brand/55 ring-1 ring-white/10 backdrop-blur-sm text-white
+               pt-[1.5625rem] pb-[1.5625rem] px-[1.6875rem]
+               lg:pt-[2.5rem] lg:pb-[1.5625rem] lg:px-[1.6875rem]
+               lg:col-span-4 lg:row-span-1 lg:col-start-1 lg:row-start-1
+               lg:flex lg:flex-col lg:h-[16.5rem]">
+                    <h3 class="text-[1.0625rem] lg:text-[1.5rem] font-semibold leading-tight">Family Offices</h3>
+                    <p class="mt-[2.8125rem] lg:mt-auto text-[0.9375rem] lg:text-[1.0625rem] leading-relaxed text-white/90">
+                        Tailored access to premium real estate portfolios designed for generational wealth and sustainable growth.
+                    </p>
+                </article>
+                <article class="rounded-[1.75rem] bg-brand/55 ring-1 ring-white/10 backdrop-blur-sm text-white
+               pt-[1.5625rem] pb-[1.5625rem] px-[1.6875rem]
+               lg:pt-[2.5rem] lg:pb-[1.5625rem] lg:px-[1.6875rem]
+               lg:col-span-4 lg:row-span-1 lg:col-start-1 lg:row-start-2
+               lg:flex lg:flex-col lg:h-[16.5rem]">
+                    <h3 class="text-[1.0625rem] lg:text-[1.5rem] font-semibold leading-tight">Investment
+                        Strategies:</h3>
+                    <p class="mt-[2.8125rem] lg:mt-auto text-[0.9375rem] lg:text-[1.0625rem] leading-relaxed text-white/90">
+                        We design structured opportunities, from luxury off-plan developments to commercial assets and land acquisitions, ensuring consistent and high-value returns.
+                    </p>
+                </article>
+                <article class="rounded-[1.75rem] bg-brand/55 ring-1 ring-white/10 backdrop-blur-sm text-white
+                      pt-[1.5625rem] pb-[1.5625rem] px-[1.6875rem]
+                      lg:pt-[2.5rem] lg:pb-[1.5625rem] lg:px-[1.6875rem]
+                      lg:col-span-4 lg:row-span-2 lg:col-start-5 lg:row-start-1
+                      lg:flex lg:flex-col lg:h-full">
+                    <h3 class="text-[1.0625rem] lg:text-[1.5rem] font-semibold leading-tight">Portfolio Growth & Exit
+                        Strategies</h3>
+                    <p class="mt-[2.8125rem] lg:mt-auto text-[0.9375rem] lg:text-[0.952rem] leading-relaxed text-white/90">
+                        From acquisition to exit, we deliver clear strategies to enhance ROI, safeguard investments, and leverage Dubai’s evolving property landscape.
+                    </p>
+                </article>
+                <article class="rounded-[1.75rem] bg-brand/55 ring-1 ring-white/10 backdrop-blur-sm text-white
+                      pt-[1.5625rem] pb-[1.5625rem] px-[1.6875rem]
+                      lg:pt-[2.5rem] lg:pb-[1.5625rem] lg:px-[1.6875rem]
+                      lg:col-span-4 lg:row-span-2 lg:col-start-9 lg:row-start-1
+                      lg:flex lg:flex-col lg:h-full">
+                    <h3 class="text-[1.0625rem] lg:text-[1.5rem] font-semibold leading-tight">Joint Ventures &
+                        Development</h3>
+                    <p class="mt-[2.8125rem] lg:mt-auto text-[0.9375rem] lg:text-[0.952rem] leading-relaxed text-white/90">
+                        We unite investors and developers, fostering collaborations that bring landmark projects to life — from concept to completion.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="page-container section-pad">
+        <div class="grid lg:grid-cols-12 gap-6 lg:gap-10 items-start">
+            <div class="lg:col-span-7">
+                <h2 class="font-normal text-white leading-tight
+         text-[clamp(1.389rem,1.1rem_+_1.2vw,1.944rem)]
+         mb-[clamp(1.389rem,0.9rem_+_0.9vw,2.278rem)]
+         text-center">
+                    I’ll be happy to cooperate
+                </h2>
+
+                <div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-[1.389rem] lg:gap-[2rem]">
+                    <a href="https://www.linkedin.com/in/may-dubai/" target="_blank" rel="noopener"
+                       class="rounded-2xl bg-stone-400 px-6 py-[1.389rem] shadow-sm ring-1 ring-brand/40">
+                        <div class="flex flex-col items-center text-center">
+                            <img src="/assets/icons/linkedin.svg" alt="Linkedin" class="w-6 h-6"/>
+                            <div class="mt-2 text-[1.5rem] font-regular font-alt leading-none text-white">Linkedin</div>
+                            <div class="mt-2 text-white text-[0.889rem]">May Dubai</div>
+                        </div>
+                    </a>
+
+                    <a href="https://t.me/+May Dubai" target="_blank" rel="noopener"
+                       class="rounded-2xl bg-brand px-6 py-[1.389rem] shadow-sm ring-1 ring-brand/40">
+                        <div class="flex flex-col items-center text-center">
+                            <img src="/assets/icons/telegram.svg" alt="Telegram" class="w-6 h-6"/>
+                            <div class="mt-2 text-[1.5rem] font-regular font-alt leading-none text-white">Telegram</div>
+                            <div class="mt-2 text-white text-[0.889rem]">May Dubai</div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/may_dubai"
+                       target="_blank" rel="noopener"
+                       class="rounded-2xl bg-brand px-6 py-[1.389rem] shadow-sm ring-1 ring-brand/40">
+                        <div class="flex flex-col items-center text-center">
+                            <img src="/assets/icons/instagram.svg" alt="Instagram" class="w-6 h-6"/>
+                            <div class="mt-2 text-[1.5rem] font-regular font-alt leading-none text-white">Instagram
+                            </div>
+                            <div class="mt-2 text-white text-[0.889rem]">May Dubai</div>
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/May_Dubai" target="_blank" rel="noopener"
+                       class="rounded-2xl bg-brand px-6 py-[1.389rem] shadow-sm ring-1 ring-brand/40">
+                        <div class="flex flex-col items-center text-center">
+                            <img src="/assets/icons/whatsapp.svg" alt="WhatsApp" class="w-6 h-6">
+                            <div class="mt-2 text-[1.5rem] font-regular font-alt leading-none text-white">WhatsApp</div>
+                            <div class="mt-2 text-white text-[0.889rem]">May Dubai</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5">
+                <div class="mt-8 lg:mt-2 flex justify-center lg:justify-end">
+                    <img src="/assets/images/photo_contacts.png" alt="Roman Miller"
+                         class="w-[min(18rem,75vw)] lg:w-[22.44rem] h-auto object-contain"/>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-footer text-white">
+    <div class="grid gap-8 md:grid-cols-2 items-start page-container section-pad">
+        <div>
+            <h2 class="font-light leading-tight text-[clamp(1.722rem,3vw,2.5rem)]">
+                May Dubai
+            </h2>
+
+            <p class="hidden md:block mt-[6.83rem] text-white opacity-50 text-[clamp(0.944rem,0.9vw,1.111rem)]">
+                Powered by Zack AI
+            </p>
+        </div>
+
+        <nav class="md:justify-self-end mt-[0.928rem]" aria-label="Footer">
+            <ul class="flex flex-wrap md:justify-end gap-x-6 gap-y-3 text-[1rem]">
+                <li><a href="#about-us" class="hover:text-brand">About me</a></li>
+                <li><a href="#facts" class="hover:text-brand">Interesting facts</a></li>
+                <li><a href="#gallery" class="hover:text-brand">Photo Gallery</a></li>
+                <li><a href="#contacts" class="hover:text-brand">Contacts</a></li>
+            </ul>
+
+            <p class="md:hidden mt-[5rem] text-white opacity-50 text-[clamp(0.944rem,0.9vw,1.111rem)]">
+                Powered by Zack AI
+            </p>
+
+            <div class="mt-[3.278rem] md:mt-[7.167rem] flex gap-6 md:justify-end">
+                <a href="https://www.linkedin.com/in/May_Dubai/"
+                   target="_blank" rel="noopener">
+                    <img src="/assets/icons/linkedin.svg" alt="LinkedIn"
+                         class="h-[2.111rem] w-[2.111rem] opacity-50 transition hover:opacity-100"/>
+                </a>
+                <a href="https://t.me/+May_Dubai" target="_blank" rel="noopener">
+                    <img src="/assets/icons/telegram.svg" alt="Telegram"
+                         class="h-[2.111rem] w-[2.111rem] opacity-50 transition hover:opacity-100"/>
+                </a>
+                <a href="https://www.instagram.com/May_Dubai"
+                   target="_blank" rel="noopener">
+                    <img src="/assets/icons/instagram.svg" alt="Instagram"
+                         class="h-[2.111rem] w-[2.111rem] opacity-50 transition hover:opacity-100"/>
+                </a>
+                <a href="https://wa.me/May_Dubai" target="_blank" rel="noopener">
+                    <img src="/assets/icons/whatsapp.svg" alt="WhatsApp"
+                         class="h-[2.111rem] w-[2.111rem] opacity-50 transition hover:opacity-100"/>
+                </a>
+            </div>
+        </nav>
+    </div>
+</footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
